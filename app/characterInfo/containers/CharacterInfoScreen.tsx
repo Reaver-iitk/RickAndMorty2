@@ -11,8 +11,6 @@ const CharacterInfoScreen = () => {
 
   const characterLoading = useLoadingCharacter();
 
-  console.log(character);
-
   return characterLoading ? (
     <ActivityIndicator style={styles.loading} size="large" />
   ) : (
