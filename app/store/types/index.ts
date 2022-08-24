@@ -16,12 +16,6 @@ export type Dependencies = {
   characterServices: typeof characterServices;
 };
 
-export type ThunkMiddlewareOptions = {
-  thunk: {
-    extraArgument: Dependencies;
-  };
-};
-
 type AppDispatch = Dispatch & ThunkDispatch<RootState, Dependencies, AnyAction>;
 export type ThunkAsyncConfig = {
   extra: Dependencies;
