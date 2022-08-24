@@ -1,0 +1,5 @@
+export const SliceNames = {
+  CHARACTERS: 'CHARACTERS',
+  CHARACTER: 'CHARACTER',
+  FAVORITES: 'FAVORITES',
+};

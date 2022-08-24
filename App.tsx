@@ -1,12 +1,17 @@
 import React from 'react';
-import { SafeAreaView, Text } from 'react-native';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import RootNavigation from './app/navigation/RootNavigation';
+import { persistor, store } from './app/store';
 
-const App = () => {
+function App() {
   return (
-    <SafeAreaView>
-      <Text>Start App</Text>
-    </SafeAreaView>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <RootNavigation />
+      </PersistGate>
+    </Provider>
   );
-};
+}
 
 export default App;
